@@ -31,6 +31,9 @@ const firebaseConfig = {
 
 const firebaseApp = initializeApp(firebaseConfig);
 const x = firebaseApp.name;
+if(x.name === "test"){
+  console.log("test");
+}
 
 const googleProvider = new GoogleAuthProvider();
 
