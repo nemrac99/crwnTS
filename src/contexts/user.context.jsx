@@ -20,9 +20,11 @@ const INITIAL_STATE = {
 
 const userReducer = (state, action) => {
   const { type, payload } = action;
-
+  console.log("dispatched");
+  console.log(action);
   switch (type) {
     case USER_ACTION_TYPES.SET_CURRENT_USER:
+      //retain all values in state, but update relevant values (here, we're setting currentUser with payload)
       return { ...state, currentUser: payload };
     default:
       throw new Error(`Unhandled type ${type} in userReducer`);
@@ -31,7 +33,7 @@ const userReducer = (state, action) => {
 
 export const UserProvider = ({ children }) => {
   const [{ currentUser }, dispatch] = useReducer(userReducer, INITIAL_STATE);
-
+  console.log(currentUser);
   const setCurrentUser = (user) =>
     dispatch({ type: USER_ACTION_TYPES.SET_CURRENT_USER, currentUser: user });
 

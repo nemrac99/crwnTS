@@ -6,7 +6,7 @@ import {
   InvertedButton,
 } from '../button/button.styles';
 
-export const CartDropdownContainer  = styled.div`
+export const CartDropdownContainer = styled.div`
   position: absolute;
   width: 240px;
   height: 340px;
