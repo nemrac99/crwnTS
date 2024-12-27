@@ -4,17 +4,18 @@ import { useParams } from 'react-router-dom';
 
 import ProductCard from '../../components/product-card/product-card.component';
 
-import { selectCategoriesMap } from '../../store/categories/categories.selector';
+import { selectCategoriesMap } from '../../store/categories/category.selector';
 
 import { CategoryContainer, Title } from './category.styles';
 
 const Category = () => {
   const { category } = useParams();
   const categoriesMap = useSelector(selectCategoriesMap);
-  console.log('rendering category');
   const [products, setProducts] = useState(categoriesMap[category]);
+  console.log("render/rerendering category component");
 
   useEffect(() => {
+    console.log("effect fired calling setProducts from category");
     setProducts(categoriesMap[category]);
   }, [category, categoriesMap]);
 
