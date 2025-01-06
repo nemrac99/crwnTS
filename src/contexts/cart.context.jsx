@@ -1,6 +1,6 @@
 import { createContext, useState, useReducer } from 'react';
-
 import { createAction } from '../utils/reducer/reducer.utils';
+
 
 const addCartItem = (cartItems, productToAdd) => {
   const existingCartItem = cartItems.find(
@@ -47,8 +47,6 @@ const CART_ACTION_TYPES = {
 const INITIAL_STATE = {
   isCartOpen: false,
   cartItems: [],
-  cartCount: 0,
-  cartTotal: 0,
 };
 
 const cartReducer = (state, action) => {
@@ -58,7 +56,7 @@ const cartReducer = (state, action) => {
     case CART_ACTION_TYPES.SET_CART_ITEMS:
       return {
         ...state,
-        ...payload,
+        cartItems: payload,
       };
     default:
       throw new Error(`Unhandled type ${type} in cartReducer`);
