@@ -21596,3 +21596,6 @@ node_modules/workbox-build/node_modules/ajv/lib/vocabularies/jtd/ref.ts
 node_modules/ws/package.json
 node_modules/ws/lib/websocket-server.js
 node_modules/ws/lib/websocket.js
+node_modules/.cache/.eslintcache
+node_modules/.cache/default-development/0.pack
+node_modules/.cache/default-development/index.pack
