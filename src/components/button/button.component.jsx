@@ -2,7 +2,7 @@ import {
   BaseButton,
   GoogleSignInButton,
   InvertedButton,
-  LoadingSpinner,
+  LoadingSpinner
 } from "./button.styles";
 
 export const BUTTON_TYPE_CLASSES = {
